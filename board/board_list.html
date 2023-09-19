@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>board_list</title>
+    <script src = "https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="jquery.lightbox-0.5.js"></script>
+    <script>
+        var articleList = [
+            {no:1, title:'제목1', writer:'hong', date:'2023-09-18', count:0},
+            {no:2, title:'제목2', writer:'hong', date:'2023-09-18', count:0},
+            {no:3, title:'제목3', writer:'hong', date:'2023-09-18', count:0},
+            {no:4, title:'제목4', writer:'hong', date:'2023-09-18', count:0},
+            {no:5, title:'제목5', writer:'hong', date:'2023-09-18', count:0}
+        ]
+
+        $(function () {
+            for (var article of articleList) {
+                //$(`<div>${article.no}</div><div><a href="detailform.html?no=${article.no}">${article.title}</a></div><div>${article.wrtier}</div><div>${article.date}</div><div>${article.count}</div><button>삭제</button>`).appendTo('');
+                var div = $(`<div class = "container"></div>`);
+                var div_no = $(`<div>${article.no}</div>`);
+                var div_title = $(`<div><a href="detailform.html?no=${article.no}">${article.title}</a></div>`);
+                var div_wrtier = $(`<div>${article.wrtier}</div>`);
+                var div_date = $(`<div>${article.date}</div>`);
+                var div_count = $(`<div>${article.count}</div>`);
+                var div_delete = $(`<button>삭제</button>`);
+
+                div.append(div_no);
+                div.append(div_title);
+                div.append(div_wrtier);
+                div.append(div_date);
+                div.append(div_count);
+                div.append(div_delete);
+                $('body').append(div);
+            }
+        })
+    </script>
+    
+    <style>
+        div{
+            text-align: center;
+        }    
+        .container{
+            width: 80%;
+            margin-left: 10%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 2fr 1fr 2fr 1fr;
+            gap: 1px;
+        }
+
+        .item{
+            background-color: orange;
+            margin: 1px;
+            padding:  0 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <div style="font-size: 20px; font-weight: bold;">글 목록 &nbsp;&nbsp;&nbsp;&nbsp;<a href="board_write.html">글쓰기</a></div>
+    <br>
+    <div>
+        <select name="" id="">
+            <option value="title">제목</option>
+            <option value="writer">글쓴이</option>
+            <option value="content">내용</option>
+        </select>
+        <input type="text">
+        <input type="button" value="검색">
+    </div>
+    <br>
+    <div class="container">
+        <div class="item">번호</div>
+        <div class="item">제목</div>
+        <div class="item">작성자</div>
+        <div class="item">날짜</div>
+        <div class="item">조회수</div>
+        <div class="item">삭제</div>
+    </div>
+    <div></div>
+</body>
+</html>

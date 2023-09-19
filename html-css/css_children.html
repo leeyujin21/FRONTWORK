@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_children</title>
+    <style>
+        #header > h1 {color: red;} /* 자식 말고 후손까지 하고 싶으면 '>' 생략하면 됨 */
+        #section > h1 {color:orange;} /* '>'는 바로 밑에 자식까지만 가능 */
+        table > tbody> tr > th{color:rgb(184, 141, 228);} 
+        /* tbody는 내가 작성하지 않아도 생성되기 때문에 tbody를 적어주거나
+        table tr > th 와 같이 작성해줘야 한다 */
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1 class="title">Lorem ipsum</h1>
+        <div id="nav">
+            <h1>Navigation</h1>
+        </div>
+    </div>
+    <div id="section">
+        <h1 class="title">Lorem ipsum</h1>
+        <p>Lorem ipsum sit amet, consectetur adipsiscing elit.</p>
+    </div>
+
+    <table border="1">
+        <tr>
+            <th>이름</th>
+            <th>지역</th>
+        </tr>
+        <tr>
+            <td>홍길동</td>
+            <td>서울시 금천구</td>
+        </tr>
+    </table>
+</body>
+</html>

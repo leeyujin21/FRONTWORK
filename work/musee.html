@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>musee</title>
+    <style>
+        body{
+            width: 650px;
+            height: 100%;
+            border-left: 6px solid gainsboro;
+            border-right: 6px solid gainsboro;
+            border-bottom: 6px solid gainsboro;
+            margin-left: 30%;
+        }
+        .top{
+            text-align: center;
+            margin-top: -50px;
+            color: white;
+            background-color: orange;
+            padding-bottom: 1px;
+        }
+        .top > h1{
+            font-size: 5em;
+            font-weight: bold;
+        }
+        .top > p{
+            margin-top: -50px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .middle{
+            font-size: 12px;
+            text-align: center;
+            background-color: gainsboro;
+        }
+        div.container{
+            height: 600px;
+            display: flex;
+            flex-direction: row;
+        }
+        .item:nth-child(1){
+            flex-grow: 1;
+        }
+        .item:nth-child(1) > div{
+            flex-grow: 1;
+            background-color: brown;
+            font-weight: bold;
+            color: white;
+            height: 30px;
+        }
+        .item:nth-child(2){
+            flex-grow: 2;
+            background-color: gainsboro;
+        }
+        .item:nth-child(3){
+            flex-grow: 1;
+        }
+        footer{
+            height: 20px;
+            font-size: 12px;
+            text-align: center;
+            color: white;
+            background-color: rgb(49, 49, 95);
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <h1>Musée d'Orsay</h1>
+        <p>Musée d'Orsay Musée d'Orsay Musée d'Orsay Musée d'Orsay Musée d'Orsay</p>
+    </div>
+    <div class="middle">Royal Academy of Arts, THE REAL VANGOGH THE ARTIST AND HIS LETTERS</div>
+    <div class="container">
+        <div class="item" id="left">
+            <div>ARTIST</div>
+        </div>
+        <div class="item" id="center">2</div>
+        <div class="item" id="right">3</div>
+    </div>
+    <footer>© 2012 Les Amis du Musée d'Orsay. All rights reserved. amis@amis-musee-orsay.org Legal status</footer>
+</body>
+</html>

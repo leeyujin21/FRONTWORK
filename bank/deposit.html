@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deposit</title>
+    <style>
+        body{
+            width: 500px;
+            margin: 10px auto;
+        }
+        #middle{
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+            margin-bottom: 1px;
+        }
+        #left{
+            width: 100px;
+            text-align: center;
+            font-weight: bold;
+            margin-right: -10px;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            border: 2px solid black;
+            width: 300px;
+            margin-left: 100px;
+        } 
+        button{
+            width: 100px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-style: double;
+            background-color: gainsboro;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <p style="font-size: 20px; font-weight: bold; text-align: center;">입 금</p>
+    <div class="container">
+        <div id="middle" style="margin-top: 5px;">
+            <div id="left">계좌번호</div>
+            <div id="right"><input type="text"></div>
+        </div>
+        <div id="middle">
+            <div id="left">입금액</div>
+            <div id="right"><input type="text"></div>
+        </div>
+        <div style="text-align: center;">
+            <button>입금</button>
+        </div>
+    </div>
+</body>
+</html>

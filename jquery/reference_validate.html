@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reference_validate</title>
+    <script src = "https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(function() {
+            $('form').submit(function(event) {
+                var value = $('input').val();
+                if(value.replace(/[a-z|A-Z]/g,'').length==0){
+                    alert('과정을 진행합니다.');
+                } else{
+                    alert('한글 이름을 입력하세요.');
+                    event.preventDefault();
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <form action="/login">
+        <label for="">이름</label>
+        <input type="text" name="" id="">
+        <input type="submit">
+    </form>
+</body>
+</html>

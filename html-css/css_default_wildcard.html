@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_default_wildcard</title>
+    <style>
+        h1{
+            color: aquamarine;
+        }
+        p{
+            color: brown;
+        }
+        *{
+            color: blueviolet;
+        }
+        #header{
+            background-color: antiquewhite;
+            width: 800px;
+            margin: 0 auto; /* 위아래는 0, 좌우는 auto */
+        }
+        #wrap{
+            background-color: aliceblue;
+           width: 800px;
+           margin: 0 auto;
+           overflow: hidden; 
+        }
+        #aside{
+            width: 200px;
+            background-color: blue;
+            float: left;
+        }
+        #content{
+            width: 600px;
+            background-color: burlywood;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>김혜성</h1>
+    <p>체력 관리를 위해 예년보다 도루 시도는 줄었어도, 대신 공격에서 마음껏 존재감을 드러낸다.
+        특히 최다 안타는 2위 손아섭(NC 다이노스·151개)에 넉넉하게 앞선 1위라 데뷔 첫 '안타왕'이 유력하다.
+        김혜성의 개인 한 시즌 최다 안타는 2021년 세운 170안타다.
+        이제 안타 2개만 추가하면 자신의 한계를 넘어설 수 있다.
+    </p>
+    <div id="header">
+        <h1>#header 태그</h1>
+    </div>
+    <div id="wrap">
+        <div id="aside"><h1>#aside 태그</h1></div>
+        <div id="content"><h1>#content 태그</h1></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>condition</title>
+    <script>
+        var date = new Date();
+        var year = date.getDate();
+        var month = date.getMonth() + 1; // month는 항상 1을 더해줘야함
+        var day = date.getDate(); //day는 요일 date가 날짜
+        var week = date.getDay();
+        var hour = date.getHours();
+        var minutes = date.getMinutes();
+        var seconds = date.getSeconds();
+
+        document.write(year+'년' + month+ '월' +day+'일');
+        if(hour<12){
+            document.writeln('오전입니다.');
+        }else{
+            document.write('오후입니다.');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

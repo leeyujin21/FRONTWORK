@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>board_content</title>
+    <style>
+        body{
+            width: 500px;
+            margin: 10px auto;
+        }
+        #middle{
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+            margin-bottom: 1px;
+        }
+        #left{
+            background-color: orange;
+            width: 150px;
+            margin-right: 1px;
+        }
+        #right{
+            width: 350px;
+            background-color: skyblue;
+        }
+        #right1{
+            width: 350px;
+        }
+        #textarea {
+            width: 98%;
+            border-color: black;
+            height: 200px;
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <p style="text-align: center; font-weight: bold; font-size: 30px;">게시판글상세</p>
+    <div id="middle">
+        <div id="left">글쓴이</div>
+        <div id="right"><input type="text" style="width: 200px;"></div>
+    </div>
+    <div id="middle">
+        <div id="left">제목</div>
+        <div id="right"><input type="text" style="width: 200px;"></div>
+    </div>
+    <div id="middle">
+        <div id="left" style="line-height: 200px;">내용</div>
+        <div id="right1"><textarea id="textarea"></textarea>
+        </div>
+    </div>
+    <div id="middle">
+        <div id="left" style="line-height: 100px;">이미지</div>
+        <img src="" width="100px" height="100px">
+    </div>
+    <div style="text-align: center;">
+        <button>수정</button>&nbsp;&nbsp;
+        <a href="board_list.html">목록</a>
+    </div>
+
+
+
+</body>
+</html>

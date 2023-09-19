@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom_fault</title>
+    <script>
+        window.onload = function(){ //dom이 모두 생성된 후에 호출된다
+            document.querySelector('h1').style.backgroundColor='red';
+            document.querySelector('h2').style.color='red';
+            let h1s = document.querySelectorAll('h1');
+            for(var h1 of h1s){
+                h1.style.background = 'red';
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+    <h1>Hello Javascript</h1>
+    <h2>Hello JQuery</h2>
+</body>
+</html>

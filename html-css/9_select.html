@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9_select</title>
+</head>
+<body>
+    <form action="test.html">
+        <select name="food" id="">
+            <option value="kimbab">김밥</option>
+            <option value="dduck">떡볶이</option>
+            <option value="soon">순대</option>
+            <option value="mook">어묵</option>
+        </select>
+        <input type="submit">
+    </form>
+    <br>
+    <form action="test2.html">
+        <select name="food2" id="" multiple> <!-- multiple 설정 시 여러 개 가능 -->
+            <option value="jja">짜장</option>
+            <option value="jjam">짬뽕</option>
+            <option value="tang">탕수육</option>
+            <option value="kkan">깐풍기</option>
+        </select>
+        <input type="submit">
+    </form>
+    <br>
+    <select name="" id="">
+        <optgroup label="HTML5"> <!-- select 내에서 그룹을 나눔 -->
+            <option value="">Multimedia Tag</option>
+            <option value="">Connectivity</option>
+            <option value="">Device Access</option>
+        </optgroup>
+        <optgroup label="CSS3">
+            <option value="">Animaiton</option>
+            <option value="">3D Transform</option>
+        </optgroup>
+    </select>
+</body>
+</html>

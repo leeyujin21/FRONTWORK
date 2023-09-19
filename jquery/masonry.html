@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>masonry</title>
+    <style>
+        * {
+            margin: 0 auto;
+            padding:0;
+        }
+        body{
+            width:80%;
+        }
+        div{
+            text-align: center;
+        }
+        .box {
+            margin: 5px;
+        }
+        #top{
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+            height: 70px;
+        }
+        .left{
+            margin-left: 0px;
+        }
+        ul,ol{
+            list-style:none
+        }
+        a{
+            text-decoration:none;
+            color: black;
+            font-size:15px
+        }
+        nav{
+            padding: a0uto;
+            overflow:hidden;
+        }
+        #nav1{
+            text-align:center;
+            margin-left: -10px;
+        }
+        #nav1>ul{
+            display:inline-block
+        }
+        #nav1>ul li{
+            float:left;padding:0 30px;line-height:80px
+        }
+        #nav1>ul li{
+            float:left;
+            padding:0px 7px 0px 7px;
+        }
+        
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://masonry.desandro.com/masonry.pkgd.min.js"></script>
+    <script src="jquery.imagesloaded.min.js" ></script>
+    <script src="jquery.masonry.min.js" ></script>
+    <script>
+        var pictures = ['picture1.jpg', 'picture2.jpg', 'picture3.jpg',
+            'picture4.jpg', 'picture5.jpg', 'picture6.jpg', 'picture7.jpg',
+            'picture8.jpg', 'picture9.jpg', 'picture10.jpg', 'picture11.jpg',
+            'picture12.jpg', 'picture13.jpg', 'picture14.jpg', 'picture15.jpg',
+            'picture16.jpg', 'picture17.jpg', 'picture18.jpg', 'picture19.jpg',
+            'picture20.jpg', 'picture21.jpg', 'picture22.jpg', 'picture23.jpg',
+            'picture24.jpg', 'picture25.jpg'];
+        $(function(){
+            for (var i = 0; i < 25; i++) {
+                let img = $('<img/>').addClass('box').attr('id','picture'+(i+1));
+                img.attr('src', 'picture/'+pictures[i]);
+                img.attr('width', 200);
+                img.attr('height', 'auto');
+                $('#picture').append(img);
+            }
+        })
+
+        $(function(){
+            for (var i = 0; i < 25; i++) {
+                let img = $('<img/>').addClass('box').attr('id','picture'+(i+1));
+                img.attr('src', 'picture/'+pictures[i]);
+                img.attr('width', 200);
+                img.attr('height', 'auto');
+                $('#picture').append(img);
+            }
+        })
+
+        $(function(){
+            //이미지 로드 확인
+            $('#picture').imagesLoaded(function(){
+                //jQuery Masonry 플러그인 적용
+                $('#picture').masonry({
+                    columnWidth:110
+                })
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <nav id="nav1">
+      </nav>
+    <div class="container" style="text-align: center;">
+        <div id="top" style="margin-top: 10px;">
+            <div class="left">검색</div>
+            <div class="center">Interest</div>
+            <div class="right"><a href="">정보</a>&nbsp;&nbsp;&nbsp;
+            <a href="">사용자</a></div>
+        </div>
+        <nav id="nav1">
+            <ul>
+              <li><a href="#">Following</a></li>
+              <li><a href="#">Categories</a></li>
+              <li><a href="#">Everything</a></li>
+              <li><a href="#">Popular</a></li>
+              <li><a href="#">Gift</a></li>
+            </ul>
+          </nav>
+        <div id="picture"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery_base</title>
+    <script src = "https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        // $(document).ready(function(){ window.onload = function(){}
+
+        // })
+
+        $(function() {
+            $('h1').css('color','red');
+            $('h1').css('background','black');
+            
+            //alert($('script').attr(src));
+            $('p').attr('id','test');
+            // $('img').attr('src','teomi.jpg');
+            // $('img').attr('alt','텀깅');
+            // $('img').attr('width','300');
+            $('img').attr({
+                src: function(index) {
+                    return 'teomi' + (index+1) + '.jpg'
+                },
+                alt:'텀깅',
+                width: function(index){
+                    return (index+1)*100;
+                }
+            });
+
+        })
+
+        // window.onload = function(){
+        //     var hs = document.querySelectorAll('h1');
+        //     for (var h of hs) {
+        //         h.style.color = 'red';
+        //         h.style.backgroundColor = 'black';
+        //     } 
+        // }
+    </script>
+</head>
+<body>
+    <h1>Header</h1>
+    <h1>Header</h1>
+    <h1>Header</h1>
+    <p></p>
+    <img src="" alt=""><br>
+    <img src="" alt=""><br>
+    <img src="" alt="">
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>makeaccount</title>
+    <style>
+        body{
+            width: 500px;
+            margin: 10px auto;
+        }
+        #middle{
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+            margin-bottom: 1px;
+        }
+        #left{
+            width: 100px;
+            text-align: center;
+            font-weight: bold;
+            margin-right: -10px;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            border: 2px solid black;
+            width: 300px;
+            margin-left: 100px;
+        } 
+        button{
+            width: 100px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-style: double;
+            background-color: gainsboro;
+            font-weight: bold;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() { 
+            $("input:radio[name=grade]").click(function(){
+                if($("input:radio[name=grade]:checked").val() === 'normal'){
+                    $("#grade").prop("disabled", true);
+                } else {
+                    $("#grade").prop("disabled", false);
+                }
+            });
+        });
+    </script>
+    
+</head>
+<body>
+    <p style="font-size: 20px; font-weight: bold; text-align: center;">계좌개설</p>
+    <div class="container">
+        <div id="middle" style="margin-top: 5px;">
+            <div id="left">계좌번호</div>
+            <div id="right"><input type="text"></div>
+        </div>
+        <div id="middle">
+            <div id="left">이름</div>
+            <div id="right"><input type="text"></div>
+        </div>
+        <div id="middle">
+            <div id="left">입금액</div>
+            <div id="right"><input type="text"></div>
+        </div>
+        <div id="middle">
+            <div id="left">종류</div>
+            <div id="right">
+                <input type="radio" value="normal" name="grade" id="normal">일반
+                <input type="radio" value="special" name="grade" id="special">특수
+            </div>
+        </div>
+        <div id="middle">
+            <div id="left">등급</div>
+            <div id="right">
+                <select name="grade" id="grade" style="width: 60px;">
+                    <option value="vip">VIP</option>
+                    <option value="gold">GOLD</option>
+                    <option value="silver">SILVER</option>
+                    <option value="normal">NORMAL</option>
+                </select>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <button>개설</button>
+        </div>
+    </div>
+</body>
+</html>

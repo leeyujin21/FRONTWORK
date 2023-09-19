@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_class</title>
+    <style>
+        .select{
+            color: blueviolet;
+        }
+        .item{
+            color: antiquewhite;
+        }
+        .header{
+            background-color: rgb(112, 13, 13);
+        }
+        input[type="text"]{background-color: aqua;}
+        input[type="password"]{background-color: chartreuse;}
+        input[type="radio"]:checked+label{background-color: rgb(209, 161, 253);}
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="select">사과</li>
+        <li>바나나</li>
+        <li class="select">오렌지</li>
+        <li>감</li>
+    </ul>
+    <h1 class="item header">키움 히어로즈</h1>
+    <form action="">
+        <input type="text">
+        <input type="password">
+        <input type="radio" name="radio"><label for="">남</label>
+        <input type="radio" name="radio"><label for="">여</label>
+    </form>
+</body>
+</html>

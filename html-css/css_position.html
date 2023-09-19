@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_position</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+        .box:nth-child(1) {
+            background-color: rebeccapurple;
+            left: 10px; top: 10px;
+            z-index: 3; /* z-index 값이 큰 것이 제일 위로 올라옴 */
+        }
+        .box:nth-child(2) {
+            background-color: aqua;
+            left: 50px; top: 50px;
+            z-index: 2;
+        }
+        .box:nth-child(3) {
+            background-color: beige;
+            left: 90px; top: 90px;
+            z-index: 1;
+        }
+        body>div{
+            border: 3px solid black;
+            position: relative;
+            width: 400px;
+            height: 100px;
+            overflow-y: scroll;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Lorem ipsum dolor amet</h1>
+    <div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <h1>Lorem ipsum dolor amet</h1>
+</body>
+</html>
